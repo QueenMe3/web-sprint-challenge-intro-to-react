@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 function textMatcher(text) {
- return text.toLowerCase().includes('luke skywalker'); 
+ return text.toLowerCase().includes('Luke Skywalker'); 
 } 
 
 function Character(props) {
