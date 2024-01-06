@@ -9,6 +9,7 @@ const urlPeople = 'http://localhost:9009/api/people'
 const App = () => {
   const [planets, setPlanets] = useState([]);
   const [people, setPeople] = useState([]);
+  const [rendered, setRendered] = useState(false);
 
   useEffect(() => {
 
@@ -19,7 +20,12 @@ const App = () => {
   axios.get('http://localhost:9009/api/people').then(response => {
     setPeople(response.data);
   });
+  setRendered(true);
   }, []);
+
+  if (!rendered) {
+    return null;
+  }
 
   return (
     <div>
