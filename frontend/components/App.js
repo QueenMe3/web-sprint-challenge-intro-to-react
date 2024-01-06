@@ -1,5 +1,4 @@
-import React from 'react'
-import { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import Character from './Character'
 
@@ -10,7 +9,7 @@ function App() {
   const [planets, setPlanets] = useState([]);
   const [people, setPeople] = useState([]);
 
-  useState(() => {
+  useEffect(() => {
     axios.get(urlPlanets).then(response => {
       setPlanets(response.data);
     });
