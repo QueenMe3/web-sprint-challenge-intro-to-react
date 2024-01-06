@@ -1,12 +1,11 @@
 import React, { useState } from 'react';
 
-function Character() {
+function Character({ showHomeworld, planet, person }) {
   const [showHomeworld, setShowHomeworld] =
   useState(false);
 
   const toggleHomeworld = () => {
     setShowHomeworld(!showHomeworld);
-  };
 
   return (
     <div>
@@ -19,6 +18,6 @@ function Character() {
       <button onClick={toggleHomeworld}>ToggleHomeworld</button>
     </div>
   );
-}
+}}
 
 export default Character

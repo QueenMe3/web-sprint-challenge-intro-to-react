@@ -7,6 +7,7 @@ const urlPlanets = 'http://localhost:9009/api/planets'
 const urlPeople = 'http://localhost:9009/api/people'
 
 function App() {
+  const [showHomeworld, setShowHomeworld] = useState(false);
   const [planets, setPlanets] = useState([]);
   const [people, setPeople] = useState([]);
 
@@ -26,10 +27,10 @@ function App() {
       <h2>Star Wars Characters</h2>
       <p>See the README of the project for instructions on completing this challenge</p>
       {planets.map(planet => (
-        <Character key={planet.id} planet={planet} showHomeworld={showHomeworld} />
+        <Character key={planet.id} planet={planet} showHomeworld={showHomeworld} planet={planet}/>
       ))}
       {people.map(person => (
-        <Character key={person.id} person={person} showHomeworld={showHomeworld} />
+        <Character key={person.id} person={person} showHomeworld={showHomeworld} person={person}/>
       ))}
     </div>
   );
