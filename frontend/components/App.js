@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import Character from './Character'
+//import { response } from 'express'
 
 const urlPlanets = 'http://localhost:9009/api/planets'
 const urlPeople = 'http://localhost:9009/api/people'
@@ -10,12 +11,14 @@ const App = () => {
   const [people, setPeople] = useState([]);
 
   useEffect(() => {
-    axios.get(urlPlanets).then(response => {
-      setPlanets(response.data);
-    });
-    axios.get(urlPeople).then(response => {
-      setPeople(response.data);
-    });
+
+  axios.get('http://localhost:9009/api/planets').then(response => {
+    setPlanets(response.data);
+  });  
+
+  axios.get('http://localhost:9009/api/people').then(response => {
+    setPeople(response.data);
+  });
   }, []);
 
   return (
@@ -29,8 +32,8 @@ const App = () => {
         <Character key={person.id} person={person}/>
       ))}
     </div>
-  )
-}
+  );
+  }
 
 export default App
 
