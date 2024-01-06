@@ -1,6 +1,10 @@
 import React, { useState } from 'react';
 
-function Character() {
+function textMatcher(text) {
+ return text.toLowerCase().includes('luke skywalker'); 
+} 
+
+function Character(props) {
   const [showHomeworld, setShowHomeworld] =
   useState(false);
 
@@ -12,7 +16,7 @@ function Character() {
     <div>
       {showHomeworld && (
     <div className='homeworld'>
-      <h2>Homeworld</h2>
+      <h2>{textMatcher(props.text)}</h2>
       <p>This is the homeworld of the character.</p>
     </div>    
       )}
