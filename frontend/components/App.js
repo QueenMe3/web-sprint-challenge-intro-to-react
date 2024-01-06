@@ -1,7 +1,11 @@
+function textMatcher(text, matchFunction){
+  return text.toLowerCase().includes(matchFunction);
+}
+
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import Character from './Character'
-import { response } from 'express'
+//import { response } from 'express'
 
 const urlPlanets = 'http://localhost:9009/api/planets'
 const urlPeople = 'http://localhost:9009/api/people'
