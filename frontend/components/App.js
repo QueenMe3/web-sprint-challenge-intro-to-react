@@ -5,7 +5,7 @@ import Character from './Character'
 const urlPlanets = 'http://localhost:9009/api/planets'
 const urlPeople = 'http://localhost:9009/api/people'
 
-function App() {
+const App = () => {
   const [planets, setPlanets] = useState([]);
   const [people, setPeople] = useState([]);
 
