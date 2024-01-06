@@ -10,7 +10,7 @@ function App() {
   const [planets, setPlanets] = useState([]);
   const [people, setPeople] = useState([]);
 
-  useEffect(() => {
+  useState(() => {
     axios.get(urlPlanets).then(response => {
       setPlanets(response.data);
     });
