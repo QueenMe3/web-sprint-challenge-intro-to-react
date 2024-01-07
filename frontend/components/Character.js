@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
-function Character({ showHomeworld, planet, person }) {
-  const [showHomeworld, setShowHomeworld] =
+function Character({ showHomeworld }) {
+  const [setShowHomeworld] =
   useState(false);
 
   const toggleHomeworld = () => {
