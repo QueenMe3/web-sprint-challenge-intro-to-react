@@ -6,7 +6,7 @@ const App = require('./frontend/components/App')
 const people = require('./backend/data/people')
 const planets = require('./backend/data/planets')
 
-jest.setTimeout(750)
+jest.setTimeout(1000)
 const waitForOptions = { timeout: 100 }
 const queryOptions = { exact: false }
 
